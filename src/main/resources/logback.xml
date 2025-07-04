@@ -1,0 +1,15 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--<pattern>[%level] %logger - %msg%n</pattern> -->
+            <pattern>[%level] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Suppress WARNs and lower from BlockManager -->
+    <logger name="net.minestom.server.instance.block.BlockManager" level="ERROR" additivity="false"/>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</configuration>
